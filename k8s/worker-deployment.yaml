@@ -1,0 +1,16 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whaileys-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: whaileys-worker }
+  template:
+    metadata:
+      labels: { app: whaileys-worker }
+    spec:
+      containers:
+      - name: worker
+        image: whaileys-worker:latest

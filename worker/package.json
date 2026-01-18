@@ -1,0 +1,12 @@
+{
+  "name": "whaileys-worker",
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "dependencies": {
+    "whaileys": "github:canove/whaileys",
+    "ioredis": "^5.4.1"
+  }
+}

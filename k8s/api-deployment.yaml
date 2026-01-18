@@ -1,0 +1,18 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whaileys-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: whaileys-api }
+  template:
+    metadata:
+      labels: { app: whaileys-api }
+    spec:
+      containers:
+      - name: api
+        image: whaileys-api:latest
+        ports:
+        - containerPort: 3000
